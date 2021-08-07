@@ -1,0 +1,48 @@
+<style type="text/css">
+    table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 50%;
+   
+  }
+  .table-data{
+      position: relative;
+    left:50px;
+    top:50px;
+  }
+  th, td {
+    padding: 15px;
+  }
+</style>
+
+    <hr>
+    
+    <% if(details!=null) { %>
+    <table>
+    <tr>
+        <th>Id</th>
+        <th>Bus Name </th>
+        <th>Total Seats</th>
+        <th>Booked Seats </th>
+        <th>From </th>
+        <th>To</th>
+    </tr>
+    <% details.forEach(function(collections){ %>
+    <tr>
+        <td><%= collections.id%></td>
+        <td><%= collections.BusName %></td>
+        <td><%= collections.TotalSeats%></td>
+        <td><%= collections.BookedSeats%></td>
+        <td><%= collections.From%></td>
+        <td><%= collections.To%></td>
+    
+    </tr>
+    <% }) %>
+    </table>
+    <% } %>
+
+   
